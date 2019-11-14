@@ -4,4 +4,5 @@ module mp3player {
     requires javafx.fxml;
 
     exports pl.player.mp3player.main to javafx.graphics;
+    opens pl.player.mp3player.controller to javafx.fxml;
 }
