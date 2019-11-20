@@ -2,30 +2,14 @@ package pl.player.mp3player.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.Slider;
-import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.MouseEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PlayerController {
-    private static Logger logger = LoggerFactory.getLogger(PlayerController.class);
-    @FXML
-    private MenuItem fileMenuItem;
-
-    @FXML
-    private MenuItem dirMenuItem;
-
-    @FXML
-    private MenuItem closeMenuItem;
-
-    @FXML
-    private MenuItem aboutMenuItem;
-
-    @FXML
-    private TableView<?> contentTable;
+public class ControlPaneController {
+    private static Logger logger = LoggerFactory.getLogger(ControlPaneController.class);
 
     @FXML
     private Button previousButton;
@@ -43,7 +27,7 @@ public class PlayerController {
     private Slider progressSlider;
 
     public void initialize() {
-        logger.info("PlayerController created");
+        logger.info("ControlPaneController created");
         configureButtons();
         configureVolumes();
     }
@@ -63,5 +47,6 @@ public class PlayerController {
                 System.out.println("Stop");
             }
         });
+
     }
 }
