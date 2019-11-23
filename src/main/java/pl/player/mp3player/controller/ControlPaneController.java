@@ -26,6 +26,26 @@ public class ControlPaneController {
     @FXML
     private Slider progressSlider;
 
+    public Button getPreviousButton() {
+        return this.previousButton;
+    }
+
+    public ToggleButton getPlayButton() {
+        return this.playButton;
+    }
+
+    public Button getNextButton() {
+        return this.nextButton;
+    }
+
+    public Slider getVolumeSlider() {
+        return this.volumeSlider;
+    }
+
+    public Slider getProgressSlider() {
+        return this.progressSlider;
+    }
+
     public void initialize() {
         logger.info("ControlPaneController created");
         configureButtons();

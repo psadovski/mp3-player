@@ -11,6 +11,10 @@ public class ContentPaneController {
     @FXML
     private TableView<?> contentTable;
 
+    public TableView<?> getContentTable() {
+        return this.contentTable;
+    }
+
     public void initialize() {
         logger.info("Content controller created");
     }
