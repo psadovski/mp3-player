@@ -12,6 +12,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <javafx.version>11.0.1</javafx.version>
+        <jid3lib.version>0.5.4</jid3lib.version>
     </properties>
 
     <dependencies>
@@ -44,6 +45,11 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
             <version>1.3.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.javamusictag</groupId>
+            <artifactId>jid3lib</artifactId>
+            <version>${jid3lib.version}</version>
         </dependency>
     </dependencies>
 </project>
