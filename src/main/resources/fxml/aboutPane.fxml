@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            prefHeight="300.0"
+            prefWidth="400.0">
+    <children>
+        <TextField editable="false"
+                   prefHeight="200"
+                   prefWidth="200"
+                   AnchorPane.bottomAnchor="0"
+                   AnchorPane.topAnchor="0"
+                   AnchorPane.leftAnchor="0"
+                   AnchorPane.rightAnchor="0"
+                   text="Wersja programu v1.0
+                Wykorzystane biblioteki:
+            http://javamusictag.sourceforge.net/"/>
+    </children>
+</AnchorPane>

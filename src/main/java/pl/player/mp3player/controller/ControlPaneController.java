@@ -3,16 +3,11 @@ package pl.player.mp3player.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.input.MouseEvent;
-import lombok.Getter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-@Getter
 public class ControlPaneController {
-    private static Logger logger = LoggerFactory.getLogger(ControlPaneController.class);
-
     @FXML
     private Button previousButton;
 
@@ -28,33 +23,30 @@ public class ControlPaneController {
     @FXML
     private Slider progressSlider;
 
-    public void initialize() {
-        logger.info("ControlPaneController created");
-        configureButtons();
-        configureVolumes();
+    @FXML
+    private TextField messageTextField;
+
+    public ToggleButton getPlayButton() {
+        return playButton;
     }
 
-    private void configureSliders() {
-        volumeSlider.valueProperty().addListener((observable, oldValue, newValue) ->
-                logger.info(String.format("Zminana glośności%s", newValue.doubleValue())));
-        progressSlider.valueProperty().addListener((observable, oldValue, newValue) ->
-                logger.info("PRzesunięcie piosenki"));
+    public Button getNextButton() {
+        return nextButton;
     }
 
-    private void configureVolumes() {
-        volumeSlider.addEventFilter(MouseEvent.MOUSE_PRESSED, event ->
-                logger.info("Wciśnięto przycisk na suwaku głośności"));
+    public Button getPreviousButton() {
+        return previousButton;
     }
 
-    private void configureButtons() {
-        previousButton.setOnAction(event -> System.out.println("Poprzednia piosenka"));
-        nextButton.setOnAction(event -> System.out.println("Następna piosenka"));
-        playButton.setOnAction(event -> {
-            if (playButton.isSelected()) {
-                System.out.println("Play");
-            } else {
-                System.out.println("Stop");
-            }
-        });
+    public Slider getVolumeSlider() {
+        return volumeSlider;
+    }
+
+    public Slider getProgressSlider() {
+        return progressSlider;
+    }
+
+    public TextField getMessageTextField() {
+        return messageTextField;
     }
 }
